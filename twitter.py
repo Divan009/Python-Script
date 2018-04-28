@@ -12,14 +12,14 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-public_tweets = api.search('Trump')
+public_tweets = api.search('Spongebob')
 
 for tweet in public_tweets:
     print(tweet.text)
     analysis = TextBlob(tweet.text)
     print(analysis.sentiment)
     
-user = api.get_user('dugar_diva')
+user = api.get_user('twitter')
 print (user.screen_name)
 print (user.followers_count)
 for friend in user.friends():
